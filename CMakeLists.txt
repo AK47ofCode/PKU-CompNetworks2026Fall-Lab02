@@ -29,7 +29,7 @@ include_directories(/usr/local/include)
 link_directories(/usr/local/lib)
 include(GoogleTest)
 
-add_library(rtp_all src/util.c)
+add_library(rtp_all src/util.c src/rtp_io.c)
 
 add_executable(sender src/sender.c)
 target_link_libraries(sender PUBLIC rtp_all)
